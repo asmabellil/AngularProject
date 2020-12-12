@@ -1,0 +1,14 @@
+<div class="an">
+<h1>Les annimaux à perdu</h1>
+<h1>Aidez nous les trouvez</h1>
+<button class="btn btn-info" (click)="calcul()">Nombre global d'animal à adopter</button>
+<h1>{{cal}}</h1>
+<br>
+<div class="row">
+<div *ngFor="let a of listAnimals" >
+<app-animal-fils *ngIf="a.etat == 3" [animal]="a" (notification)="deleteA($event)" (notificationModifier)="modifierA($event)" (notifstate)="sendState()"></app-animal-fils>
+</div>
+</div>
+<br>
+<app-animal [animalUpIn]="animalUp" [s1]="s" (updateAnimal)="updateAjour($event)" *ngIf="state" ></app-animal>
+</div>

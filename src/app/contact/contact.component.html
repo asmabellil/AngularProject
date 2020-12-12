@@ -1,0 +1,157 @@
+<!--Section: Contact v.2-->
+<section class="mb-4">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contacter Nous</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">Avez vous des questions? N'hésitez pas à nous contacter directement. Notre équipe reviendra vers vous dans quelques heures pour vous aider.</p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form #f="ngForm">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div >
+                            <label>	Nom :</label>
+                            <input type="text" name="nom" class="form-control"  [(ngModel)]="contact.nom" 
+                             minlength="3" required placeholder="Votre nom" #n="ngModel">
+                            
+                        </div>
+                        <div class="alert alert-danger" *ngIf="n.touched && n.invalid">
+                            <div *ngIf="n.errors.required">Le nom est un champs obligatoire.</div>
+                            <div *ngIf="n.errors.minlength">Le nom doit contenir au moins 2 caractères.</div>
+                          </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <label for="email" class="">Email :</label>
+                            <input type="text" name="email" class="form-control" #e="ngModel" [(ngModel)]="contact.email" required placeholder="Votre email" >
+                            
+                        </div>
+
+                        <div class="alert alert-danger" *ngIf="e.touched && e.invalid">
+                            <div *ngIf="e.errors.required">L'email' est un champs obligatoire.</div>
+                          </div>    
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <label for="subject" class="">Sujet</label>
+                            <input type="text" name="sujet" class="form-control" #s="ngModel" [(ngModel)]="contact.sujet" required placeholder="Sujet">
+                            <div class="alert alert-danger" *ngIf="s.touched && s.invalid">
+                                Le sujet est un champs obligatoire. 
+                              </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <label for="message">Votre message</label>
+                            <textarea type="text" name="message" rows="2" #m="ngModel" class="form-control md-textarea" [(ngModel)]="contact.message" required placeholder="Votre message"></textarea>
+                            
+                        </div>
+                        <div class="alert alert-danger" *ngIf="m.touched && m.invalid">
+                            Le message est un champs obligatoire. 
+                          </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+            <br>
+            <button class="btn btn-outline-primary" (click)="save(this.contact)">Envoyer</button>
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Ariana Soghra Tunisie</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+216 29 285 979 </p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+				<p>pets0139@gmail.com</p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
+
+<!--sign in-->
+<!-- Default form login
+<form class="text-center border border-light p-5" action="#!">
+
+    <p class="h4 mb-4">Sign in</p> -->
+
+    <!-- Email 
+    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">-->
+
+    <!-- Password 
+    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+
+    <div class="d-flex justify-content-around">
+        <div>-->
+            <!-- Remember me 
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+            </div>
+        </div>
+        <div>-->
+            <!-- Forgot password 
+            <a href="">Forgot password?</a>
+        </div>
+    </div>-->
+
+    <!-- Sign in button 
+    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>-->
+
+    <!-- Register
+    <p>Not a member?
+        <a href="">Register</a>
+    </p> -->
+
+    <!-- Social login 
+    <p>or sign in with:</p>
+
+    <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+    <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+    <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+    <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+</form>-->
+<!-- Default form login -->
+

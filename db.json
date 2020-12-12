@@ -1,0 +1,161 @@
+{
+  "animals": [
+    {
+      "idClient": "2",
+      "nom": "Inconnue",
+      "race": "Dog",
+      "age": "5",
+      "prix": "0",
+      "photo": "\\assets\\3.jpg",
+      "etat": "2",
+      "description": "beau",
+      "id": 2
+    },
+    {
+      "idClient": "3",
+      "nom": "Michka",
+      "race": "chat orangé",
+      "age": "4",
+      "prix": "0",
+      "photo": "\\assets\\2.jpg",
+      "etat": "3",
+      "description": "beau",
+      "id": 3
+    },
+    {
+      "idClient": "3",
+      "nom": "Cheval",
+      "race": "Cheval marron",
+      "age": "5",
+      "prix": "200",
+      "photo": "\\assets\\cheval.jpg",
+      "etat": "1",
+      "description": "très beau",
+      "id": 4
+    },
+    {
+      "idClient": "1",
+      "nom": "Michou",
+      "race": "Cheval",
+      "age": "3",
+      "prix": "100",
+      "photo": "\\assets\\cheval.jpg",
+      "etat": "3",
+      "description": "beau",
+      "id": 5
+    },
+    {
+      "idClient": "4",
+      "nom": "Inconnue",
+      "race": "Chien",
+      "age": "6",
+      "prix": "0",
+      "photo": "\\assets\\8.jpg",
+      "etat": "2",
+      "description": "fluffy ",
+      "id": 6
+    },
+    {
+      "idClient": "3",
+      "nom": "Michka",
+      "race": "chat siamois",
+      "age": "12",
+      "prix": "120",
+      "photo": "\\assets\\siamois.jpg",
+      "etat": "1",
+      "description": "très petit",
+      "id": 7
+    },
+    {
+      "idClient": "1",
+      "nom": "Inconnue",
+      "race": "Chat",
+      "age": "3",
+      "prix": "0",
+      "photo": "\\assets\\cat2.jpg",
+      "etat": "2",
+      "description": "trés calme",
+      "id": 8
+    },
+    {
+      "idClient": "2",
+      "nom": "Simba",
+      "race": "chien",
+      "age": "5",
+      "prix": "320",
+      "photo": "\\assets\\dog.jpg",
+      "etat": "3",
+      "description": "beau",
+      "id": 9
+    },
+    {
+      "nom": "Felix",
+      "idClient": "3",
+      "race": "lapin",
+      "age": "9",
+      "prix": "0",
+      "photo": "\\assets\\lapin.jpg",
+      "etat": "1",
+      "description": "fluffy",
+      "id": 10
+    }
+  ],
+  "utilisateurs": [
+    {
+      "id": "1",
+      "mdp": "123456789",
+      "nom": "Bellil",
+      "prenom": "Asma",
+      "cin": "12846298",
+      "adresse": "13 Rue Oasis Msaken 4070",
+      "numTel": "29285979",
+      "description": "admin"
+    },
+    {
+      "id": "2",
+      "mdp": "123456",
+      "nom": "Sanhegi",
+      "prenom": "Maryem",
+      "cin": "12659874",
+      "adresse": "15 Gabes 6000",
+      "numTel": "20234717",
+      "description": "client"
+    },
+    {
+      "id": "3",
+      "mdp": "motdepasse",
+      "nom": "Chayeb",
+      "prenom": "Marwen",
+      "cin": "12345678",
+      "adresse": "15 El Jem 4000",
+      "numTel": "50006786",
+      "description": "client"
+    },
+    {
+      "id": "4",
+      "mdp": "motdepasse",
+      "nom": "Majdoub",
+      "prenom": "Raoudha",
+      "cin": "12859764",
+      "adresse": "16 Msaken 4070",
+      "numTel": "20358680",
+      "description": "client"
+    }
+  ],
+  "contacts": [
+    {
+      "nom": "Asma",
+      "email": "asma.bellil1@esprit.tn",
+      "sujet": "Animal",
+      "message": "Animal très mauvais",
+      "id": 1
+    },
+    {
+      "nom": "Raoudha",
+      "email": "raoudha@gmail.com",
+      "sujet": "Merci",
+      "message": "Merci pour vous j'ai bien trouvé mon petit chien grâce à votre site",
+      "id": 2
+    }
+  ]
+}

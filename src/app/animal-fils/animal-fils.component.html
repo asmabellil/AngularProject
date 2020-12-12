@@ -1,0 +1,16 @@
+<div class="col-md-3">
+  <div class="card" style="width: 20rem;">
+    <img src={{animal.photo}} class="card-img-top" alt="..." width="100" height="200"/>
+    <div class="card-body">
+      <h5 class="card-title">Race : {{animal.race}}</h5>
+      <h5 class="card-title">Age : {{animal.age}}</h5>
+      <h5 class="card-title">Prix : {{animal.prix}}</h5>
+      <a [routerLink]="['detail',animal.id]">Details</a>
+      <br>
+      <div>
+      <button class="btn btn-outline-success " (click)="sendNotif()">Réserver</button>
+      <button class="btn btn-outline-warning" (click)="send()" (click)="update()" >Modifier</button>
+    </div>
+  </div>
+</div>
+</div>

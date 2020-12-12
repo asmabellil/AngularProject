@@ -1,0 +1,101 @@
+<!-- pattern: id unique/id du client-->
+<div class="an">
+<h1>Ajouter un animal</h1>
+  <form #f="ngForm">
+    <!--
+    <div class="form-group">
+        <label>Id Animal:</label>
+        <input type="text" name="idanimal" class="form-control" id="idAnimal" value="{{ animalUpIn? animalUpIn.id: '' }}"
+               [(ngModel)]="animal.id" #ia="ngModel" required value="Id Animal">
+    
+      <button class="btn btn-info" (click)="generation()">Generer ID et l'utiliser</button> {{long}}
+      </div>-->
+      
+    
+      <div class="form-group">
+              <label>Id Client:</label>
+              <input type="text" name="idclient" class="form-control" value="{{ animalUpIn? animalUpIn.idClient: '' }}"
+                     [(ngModel)]="animal.idClient" #i="ngModel" required placeholder="Id Prioritaire">
+            </div>
+            <div class="alert alert-danger" *ngIf="i.touched && i.invalid">
+              Id Client est un champs obligatoire. 
+            </div>
+
+      <div class="form-group">
+        <label>Nom:</label>
+        <input type="text" name="nom" class="form-control" [(ngModel)]="animal.nom" value="{{ animalUpIn? animalUpIn.nom: '' }}"
+               required minlength="2" #n="ngModel" placeholder="Nom Animal">
+      </div>
+      <div class="alert alert-danger" *ngIf="n.touched && n.invalid">
+        <div *ngIf="n.errors.required">Le nom est un champs obligatoire.</div>
+        <div *ngIf="n.errors.minlength">Le nom doit contenir au moins 2 caractères.</div>
+      </div>
+      
+      <div class="form-group">
+        <label>Race:</label>
+        <input type="text" name="race" class="form-control" [(ngModel)]="animal.race" value="{{ animalUpIn? animalUpIn.race: '' }}"
+               required  #r="ngModel" placeholder="Race Animal">
+      </div>
+      <div class="alert alert-danger" *ngIf="r.touched && r.invalid">
+        La race est un champs obligatoire.
+      </div>  
+      
+      <div class="form-group">
+        <label>Age(en mois) :</label>
+        <input type="text" name="age" class="form-control" value="{{ animalUpIn? animalUpIn.age: '' }}"
+               [(ngModel)]="animal.age" #a="ngModel" required placeholder="Age Animal">
+      </div>
+      <div class="alert alert-danger" *ngIf="a.touched && a.invalid">
+        L'age est un champs obligatoire.
+      </div>    
+      
+      <div class="form-group">
+        <label>Prix :</label>
+        <input type="text" name="prix" class="form-control" value="{{ animalUpIn? animalUpIn.prix: '' }}"
+               [(ngModel)]="animal.prix" #p="ngModel" required placeholder="Prix Animal en Dinar">
+      </div>
+      <div class="alert alert-danger" *ngIf="p.touched && p.invalid">
+        L'age est un champs obligatoire.
+      </div>       
+
+      <div class="form-group">
+        <label>Photo:</label>
+        <input type="file" name="photo" class="form-control" [(ngModel)]="animal.photo" value="{{ animalUpIn? animalUpIn.photo: '' }}"
+               required #ph="ngModel" (change)="onChange($event)" placeholder="Photo Animal">
+      </div>
+      <div *ngIf="myimage">
+        <img [src]="myimage | async" alt="" />
+      </div>
+      <div class="alert alert-danger" *ngIf="ph.touched && ph.invalid">
+        L'image est obligatoire.
+      </div>       
+      <br>
+      <div class="form-group">
+        <tr>
+            <td> Etat : </td>
+            <select class="form-control"
+            name="etat"
+            [(ngModel)]="animal.etat"
+            required
+            #e="ngModel">
+        <option value="1">Adopté</option>
+        <option value="2">Trouvé</option>
+        <option value="3">Perdu</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label>Description:</label>
+        <textarea type="text" name="Description" class="form-control" [(ngModel)]="animal.description" value="{{ animalUpIn? animalUpIn.description: '' }}"
+              required #d="ngModel" placeholder="Ajouter une description de votre animal"></textarea>
+      </div>   
+    
+      <div class="alert alert-danger" *ngIf="d.touched && d.invalid">
+        Description est obligatoire.
+      </div>  
+
+<button class="btn btn-info" (click)="save()" [disabled]="f.invalid" [hidden]="s1==true">Ajouter</button>
+<button class="btn btn-warning" (click)="modifierA(animal)" [disabled]="f.invalid" [hidden]="s1!=true">Modifier</button>
+</form>
+</div>

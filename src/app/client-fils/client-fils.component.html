@@ -1,0 +1,16 @@
+<div class="col-md-3">
+<div class="card" style="width: 18rem;" [ngStyle]="{'background-color':getColor()}">
+    <div class="card-header">
+      Id : {{client.id}}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Nom : {{client.nom}}</li>
+      <li class="list-group-item">Prenom : {{client.prenom}}</li>
+      <li class="list-group-item">CIN : {{client.cin}}</li>
+      <li class="list-group-item">Adresse : {{client.adresse}}</li>
+      <li class="list-group-item">Numéro de teléphone : {{client.numTel}}</li>
+      <li class="list-group-item">Role : {{client.description}}</li>
+      <button class="btn btn-danger" (click)="sendSupprim()">Supprimer client</button>
+    </ul>
+  </div>
+  </div>

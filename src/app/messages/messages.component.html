@@ -1,0 +1,7 @@
+<br>
+<h1>Liste des messages reçus</h1>
+<div class="row">
+<div *ngFor="let m of contacts">
+<app-messages-fils [contact]="m" (notifSup)="supprimerMessage($event)"></app-messages-fils>
+</div>
+</div>

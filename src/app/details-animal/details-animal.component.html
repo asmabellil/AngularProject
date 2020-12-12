@@ -1,0 +1,26 @@
+<div *ngFor="let a of listAnimals">
+<div *ngIf="a.id == id">
+        <div class="card" style="width: 25rem;">
+            <img src="{{a.photo}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card Id : {{a.id}}</h5>
+              <p class="card-text">Id : {{a.id}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Nom : {{a.nom}}</li>
+              <li class="list-group-item">Race : {{a.race}}</li>
+              <li class="list-group-item">Age : {{a.age}}</li>
+              <li class="list-group-item">Prix : {{a.prix}}</li>
+              <li class="list-group-item">Etat : {{a.etat}}</li>
+              <li class="list-group-item">Description : {{a.description}}</li>
+              <li class="list-group-item p">Prioritaire</li>
+              <li class="list-group-item">Id du prioritaire : {{a.idClient}}</li>
+              <li class="list-group-item">Nom du prioritaire : {{personne.prenom}}</li>
+              <li class="list-group-item">Nom du prioritaire : {{personne.nom}}</li>
+              <li class="list-group-item">Nom du prioritaire : {{personne.numTel}}</li>
+              <li class="list-group-item">Nom du prioritaire : {{personne.adresse}}</li>
+            </ul>
+          </div>
+    </div>
+  </div>
+

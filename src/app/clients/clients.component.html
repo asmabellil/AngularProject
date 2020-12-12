@@ -1,0 +1,7 @@
+<br>
+<h1>Liste des clients</h1>
+<div class="row">
+<div *ngFor="let c of clients">
+<app-client-fils [client]="c" (notifSup)="supprimerClient($event)"></app-client-fils>
+</div>
+</div>

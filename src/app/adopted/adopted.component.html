@@ -1,0 +1,34 @@
+<div class="an">
+
+<h1>Recherche</h1>
+<div class="form-group">
+    <tr>
+        <td style="color: rgb(69, 69, 190);"> Votre critére : </td>
+        <select class="form-control"
+        name="etat"
+        [(ngModel)]="critere"
+        required
+        #e="ngModel">
+    <option value="race">Race</option>
+    <option value="age">Age</option>
+    <option value="prix">Prix</option>
+    </select>
+  </div>
+<input type="text" name="valeur" class="form-control" [(ngModel)]="valeur" placeholder="Valeur">
+<br>
+<button class="btn btn-info" (click)="recherche()">Rechercher</button>
+<div *ngFor="let animal of listAnimals">
+<app-animal-fils [animal]="animal" *ngIf="stateRech"></app-animal-fils>
+</div>
+<h1>Les annimaux à adopter</h1>
+<button class="btn btn-info" (click)="calcul()">Nombre global d'animal à adopter</button>
+<h1>{{cal}}</h1>
+<br>
+<div class="row">
+<div *ngFor="let a of listAnimals" >
+<app-animal-fils  [animal]="a" *ngIf="a.etat == 1" (notification)="deleteA($event)" (notificationModifier)="modifierA($event)" (notifstate)="sendState()"></app-animal-fils>
+</div>
+</div>
+<br>
+<app-animal [animalUpIn]="animalUp" [s1]="s" (updateAnimal)="updateAjour($event)" *ngIf="state" ></app-animal>
+</div>

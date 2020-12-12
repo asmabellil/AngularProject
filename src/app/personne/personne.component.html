@@ -1,0 +1,125 @@
+<br>
+<!-- Default form login -->
+<form class="text-center border border-light p-5" action="#!">
+
+    <p class="h4 mb-4">Se Connecter</p>
+
+    <!-- Email -->
+    <input type="email" name="idC" class="form-control mb-4" placeholder="Id" [(ngModel)]="idC">
+
+    <!-- Password -->
+    <input type="password" name="mdpC" class="form-control mb-4" placeholder="Mot de passe" [(ngModel)]="mdpC">
+
+    <div class="d-flex justify-content-around">
+        <div>
+            <!-- Remember me -->
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+            </div>
+        </div>
+        <div>
+            <!-- Forgot password -->
+            <a href="">Forgot password?</a>
+        </div>
+    </div>
+
+    <!-- Sign in button -->
+    <button class="btn btn-info btn-block my-4" type="submit" (click)="verifier()">Se connecter</button>
+
+    <!-- Register -->
+    <p>Tu n'est pas un membre?
+    </p>
+    <button class="btn btn-info" (click)="show()">Formulaire d'inscription</button>
+</form>
+
+
+<!-- Default form login -->
+<br>
+
+<form [formGroup]="registerForm" *ngIf="formState" [ngStyle]="{'background-color':'rgb(212, 227, 243)'}"> 
+    <div class="containe"> 
+    <br>
+  
+    <h1>S'inscrire</h1>
+<div class="form-group">
+    <label>Id Client :</label>
+    <input type="text" class="form-control" formControlName="id" [(ngModel)]="utilisateur.id">
+    <div class="alert alert-danger" *ngIf="id.errors && id.touched">
+        L'identifiant est obligatoire.
+    </div>
+    <br>
+    <button class="btn btn-info" (click)="generation()">Generer ID et l'utiliser</button> {{long}}
+</div>
+
+<div class="form-group">
+    <label>Mot de passe :</label>
+    <input type="password" class="form-control" formControlName="mdp" [(ngModel)]="utilisateur.mdp">
+    <div class="alert alert-danger" *ngIf="mdp.errors && mdp.touched">
+        <div *ngIf="mdp.errors.required">Le mot de passe est obligatoire.</div>
+        <div *ngIf="mdp.errors.minlength">Longueur minimal du mot de passe est 6 caractéres</div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label>Nom :</label>
+    <input type="text" class="form-control" formControlName="nom" [(ngModel)]="utilisateur.nom">
+    <div class="alert alert-danger" *ngIf="nom.errors && nom.touched">
+        <div *ngIf="nom.errors.required">Le nom est obligatoire.</div>
+        <div *ngIf="nom.hasError('minlength')">Le nom doit contenir au moins 3 caractéres.</div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label>Prenom :</label>
+    <input type="text" class="form-control" formControlName="prenom" [(ngModel)]="utilisateur.prenom">
+    <div class="alert alert-danger" *ngIf="prenom.errors && prenom.touched">
+        <div *ngIf="prenom.errors.required">Le prenom est obligatoire.</div>
+        <div *ngIf="prenom.hasError('minlength')">Le prenom doit contenir au moins 3 caractéres.</div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label>Cin :</label>
+    <input type="text" class="form-control" formControlName="cin" [(ngModel)]="utilisateur.cin">
+    <div class="alert alert-danger" *ngIf="cin.errors && cin.touched">
+        <div *ngIf="cin.errors.required">La CIN est obligatoire.</div>
+        <div *ngIf="cin.errors.pattern">La CIN doit contenir exactement 8 chiffres.</div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label>Adresse :</label>
+    <input type="text" class="form-control" formControlName="adresse" [(ngModel)]="utilisateur.adresse">
+    <div class="alert alert-danger" *ngIf="adresse.errors && adresse.touched">
+        <div *ngIf="adresse.errors.pattern">Forme d'adresse obligatoire (exemple: 15 Rue Ibn Khaldoun 4070)</div>
+        <div *ngIf="adresse.errors.required">L'adresse est obligatoire.</div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label>Numéro de téléphone :</label>
+    <input type="text" class="form-control" formControlName="numTel" [(ngModel)]="utilisateur.numTel">
+    <div class="alert alert-danger" *ngIf="numtel.errors && numtel.touched">
+        <div *ngIf="numtel.errors.required">Le numéro de téléphone est obligatoire.</div>
+        <div *ngIf="numtel.errors.pattern">Le numéro de téléphone doit contenir exactement 8 chiffres.</div>
+    </div>
+</div>
+
+<div class="form-group">
+    <tr>
+        <select class="form-control"
+        formControlName="description"
+        [(ngModel)]="utilisateur.description"
+        required
+        >
+    <option value="client">Client</option>
+    </select>
+  </div>
+
+
+<button class="btn btn-primary" (click)="save()" [disabled]="registerForm.invalid">S'inscrire</button>
+</div>
+</form>
+
+
